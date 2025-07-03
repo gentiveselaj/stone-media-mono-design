@@ -17,6 +17,13 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+  @font-face {
+  font-family: 'Maharlika';
+  src: url('/fonts/Maharlika-Regular 2.tff') format('tff'),
+       url('/fonts/Maharlika-Regular.tff') format('tff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @keyframes logo-spin {
   from {

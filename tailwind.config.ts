@@ -1,6 +1,11 @@
 import type { Config } from "tailwindcss";
 
+
+
+
 export default {
+
+	
 	darkMode: ["class"],
 	content: [
 		"./pages/**/*.{ts,tsx}",
@@ -18,6 +23,7 @@ export default {
 			}
 		},
 		extend: {
+			
 			fontFamily: {
 				sans: ['Maharlika', 'system-ui', 'sans-serif'],
 			},

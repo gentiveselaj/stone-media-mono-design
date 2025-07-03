@@ -26,6 +26,7 @@ const About = () => {
           <div className="relative">
             <div className="w-full h-96 bg-black"></div>
             <div className="absolute inset-4 border-2 border-gray-300"></div>
+          
           </div>
         </div>
       </div>
