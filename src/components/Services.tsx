@@ -1,5 +1,5 @@
 
-import { Code, Globe, Smartphone } from 'lucide-react';
+import { Code, Globe, Smartphone,Upload,Wrench,Briefcase } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -17,6 +17,21 @@ const Services = () => {
       icon: Smartphone,
       title: "Mobile Applications",
       description: "Native and cross-platform mobile apps that engage users across all devices."
+    },
+    {
+      icon: Upload,
+      title: "Deployment",
+      description: "Seamless deployment of your applications to cloud or on-prem environments, ensuring smooth go-live experiences."
+    },
+    {
+      icon: Wrench,
+      title: "Maintenance & Support",
+      description: "Ongoing updates, monitoring, and technical support to keep your software secure, stable, and up to date."
+    },
+    {
+      icon: Briefcase,
+      title: "Consulting",
+      description: "Expert guidance to help you plan, strategize, and execute successful digital solutions for your business."
     }
   ];
 

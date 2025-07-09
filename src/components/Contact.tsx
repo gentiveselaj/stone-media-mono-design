@@ -16,11 +16,11 @@ const Contact = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="flex flex-col items-center">
             <Mail className="w-8 h-8 mb-4" />
-            <span className="text-lg">hello@stonemedia.dev</span>
+            <span className="text-lg">stonemediagency@gmail.com</span>
           </div>
           <div className="flex flex-col items-center">
             <Phone className="w-8 h-8 mb-4" />
-            <span className="text-lg">+1 (555) 123-4567</span>
+            <span className="text-lg">+383 49 503 417</span>
           </div>
           <div className="flex flex-col items-center">
             <MapPin className="w-8 h-8 mb-4" />

@@ -2,19 +2,19 @@
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Stone Media transformed our vision into reality. Their attention to detail and technical expertise exceeded our expectations.",
-      author: "Sarah Johnson",
-      company: "TechFlow Inc."
+      quote: "Collaborating with Stone Media was a pleasure. The professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. ",
+      author: "Burim Zogaj",
+      company: "Burim Zogaj SA."
     },
     {
-      quote: "Professional, reliable, and innovative. The team delivered our mobile app on time and within budget.",
-      author: "Michael Chen",
-      company: "StartupHub"
+      quote: "As a client, We had the privilege of working with Stone Media on our App for Arbresh.info, and I was thoroughly impressed with the skills and professionalism. They consistently exceeded our expectations, delivering exceptional results on time and with great attention to detail. ",
+      author: "Bleriant Syla ",
+      company: "Arbresh.info"
     },
     {
       quote: "Working with Stone Media was seamless. They understood our needs and delivered a solution that drives real results.",
-      author: "Emily Rodriguez",
-      company: "Digital Solutions Co."
+      author: "Ard Ceku",
+      company: "D-Tring Qeramika"
     }
   ];
 

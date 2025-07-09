@@ -7,6 +7,19 @@ All colors MUST be HSL.
 */
 
 
+@font-face {
+  font-family: 'Maharlika';
+  src: url('/fonts/Maharlika-Regular 2.tff') format('truetype'),
+       url('/fonts/Maharlika-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Maharlika', sans-serif;
+}
+
 
 @layer base {
   :root {
