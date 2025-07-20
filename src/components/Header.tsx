@@ -1,17 +1,17 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '/stone_trans.png';
+import logo from '/newlogowhite.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent/50 backdrop-blur-sm ">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent/10 backdrop-blur-sm ">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* img src={logo} width={100} alt="Stone Media" /> /* Logo * */}
-          <p className='text-white text-3xl'>Stone Media</p>
+         < img src={logo} width={100} alt="Stone Media" />
+        { /* <p className='text-white text-3xl'>Stone Media</p> */}
           
           {/* Desktop Navigation * --> */}
           <nav className="hidden md:flex items-center space-x-8">
