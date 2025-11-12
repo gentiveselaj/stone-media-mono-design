@@ -6,7 +6,7 @@ const Contact = () => {
     <section className="py-24 px-6 bg-black text-white">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-8">
-          Ready to Start Your Project?
+          Ready to Start Your Next Project?
         </h2>
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
           Let's discuss how we can bring your vision to life. 
