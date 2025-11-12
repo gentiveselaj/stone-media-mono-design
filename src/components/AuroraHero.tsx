@@ -12,7 +12,7 @@ import {
 } from "framer-motion";
 
 // Define color array as a constant
-const COLORS_TOP: string[] = ["#333333", "#FFFFFF", "#E1F4F3", "#706C61"];
+const COLORS_TOP: string[] = ["#78B9B5", "#0F828C", "#065084", "#320A6B"];
 
 export const AuroraHero: React.FC = () => {
   const color = useMotionValue<string>(COLORS_TOP[0]);
