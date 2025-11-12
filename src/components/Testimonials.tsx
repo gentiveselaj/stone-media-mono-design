@@ -1,4 +1,6 @@
 
+import { motion } from "framer-motion";
+
 const Testimonials = () => {
   const testimonials = [
     {
@@ -18,15 +20,65 @@ const Testimonials = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: [0.6, 0.05, 0.01, 0.9]
+      }
+    }
+  };
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.9,
+        ease: [0.6, 0.05, 0.01, 0.9]
+      }
+    }
+  };
+
   return (
     <section className="py-24 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-black mb-16 text-center">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-black mb-16 text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={titleVariants}
+        >
           What Our Clients Say
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        </motion.h2>
+        <motion.div 
+          className="grid md:grid-cols-3 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={containerVariants}
+        >
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-8 hover:shadow-lg transition-shadow duration-300">
+            <motion.div 
+              key={index} 
+              className="bg-white p-8 hover:shadow-lg transition-shadow duration-300"
+              variants={itemVariants}
+            >
               <p className="text-lg text-gray-600 mb-6 leading-relaxed italic">
                 "{testimonial.quote}"
               </p>
@@ -34,9 +86,9 @@ const Testimonials = () => {
                 <div className="font-bold text-black">{testimonial.author}</div>
                 <div className="text-gray-500">{testimonial.company}</div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

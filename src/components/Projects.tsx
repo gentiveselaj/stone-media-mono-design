@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
@@ -61,18 +62,65 @@ const Projects = () => {
 
   const [selectedProject, setSelectedProject] = useState(null);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: [0.6, 0.05, 0.01, 0.9]
+      }
+    }
+  };
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.9,
+        ease: [0.6, 0.05, 0.01, 0.9]
+      }
+    }
+  };
+
   return (
     <section className="py-24 px-6 bg-transparent">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-black mb-16 text-center">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-black mb-16 text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={titleVariants}
+        >
           Featured Projects
-        </h2>
-        <div className="grid md:grid-cols-2 gap-12">
+        </motion.h2>
+        <motion.div 
+          className="grid md:grid-cols-2 gap-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={containerVariants}
+        >
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
               className="group cursor-pointer"
               onClick={() => setSelectedProject(project)}
+              variants={itemVariants}
             >
               <div className="h-70  mb-6 duration-300">
                 <img src={project.image} alt={project.title} className="w-full h-full " />
@@ -94,9 +142,9 @@ const Projects = () => {
               
 
               
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Modal */}
