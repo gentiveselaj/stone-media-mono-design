@@ -50,7 +50,7 @@ jobs:
           # port: 22 # Uncomment and change if using SFTP or a custom port
 
           # This is the folder created by 'npm run build'
-          local-dir: ./build/
+          local-dir: ./dist/
 
           # This is the target directory on your Hostinger server
           # e.g., /public_html or /domains/yourdomain.com/public_html
