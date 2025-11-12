@@ -1,0 +1,61 @@
+# .github/workflows/deploy.yml
+
+name: Build and Deploy React App to Hostinger
+
+# Trigger the workflow on pushes to the 'main' branch
+on:
+  push:
+    branches:
+      - main # Or 'master', depending on your branch name
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # Use the latest stable Ubuntu environment
+
+    steps:
+      # 1. Check out the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js
+      # This step installs Node.js, which is needed to build your React app
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Specify your Node.js version
+          cache: 'npm' # Cache npm dependencies for faster builds
+
+      # 3. Install Dependencies
+      # Runs 'npm install' to get all required packages
+      - name: Install Dependencies
+        run: npm install
+
+      # 4. Build the React App
+      # Runs 'npm run build', which creates the '/build' folder
+      - name: Build React App
+        run: npm run build
+        # If your app has a homepage path (e.g., in package.json),
+        # make sure it's set correctly (e.g., "/")
+
+      # 5. Deploy to Hostinger via FTP
+      # Uses a popular GitHub Action to sync files via FTP/SFTP
+      - name: Deploy to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          # Use SFTP (recommended) if available, otherwise default FTP
+          # server: sftp.hostinger.com (Check your Hostinger panel)
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # port: 22 # Uncomment and change if using SFTP or a custom port
+
+          # This is the folder created by 'npm run build'
+          local-dir: ./dist/
+
+          # This is the target directory on your Hostinger server
+          # e.g., /public_html or /domains/yourdomain.com/public_html
+          server-dir: ${{ secrets.FTP_PATH }}
+
+          # Options for deployment
+          # clean: true # Uncomment to delete old files on the server
+          # exclude: .git*, .git*/**, node_modules/** # Exclude unnecessary files
