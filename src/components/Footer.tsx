@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-2xl font-bold text-black mb-4 md:mb-0">Stone Media </div>
           <div className="text-gray-600">
-            © 2025 Stone Media. All rights reserved.
+            © 2026 Stone Media. All rights reserved.
           </div>
         </div>
       </div>
