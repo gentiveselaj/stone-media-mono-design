@@ -2,6 +2,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
+import Solutions from '@/components/Solutions';
 import React, { useEffect } from "react";
 import Projects from '@/components/Projects';
 import About from '@/components/About';
@@ -33,6 +34,9 @@ const Index = () => {
             
       <div id="services">
         <Services />
+      </div>
+      <div id="solutions">
+        <Solutions />
       </div>
       <div id="projects">
         <Projects />
