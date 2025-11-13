@@ -17,6 +17,10 @@ const Testimonials = () => {
       quote: "Working with Stone Media was seamless. They understood our needs and delivered a solution that drives real results.",
       author: "Ard Ceku",
       company: "D-Tring Qeramika"
+    }, {
+      quote: "StoneMedia did a wonderful job designing and developing our landing pages  Highly skilled, and will work with them again for future projects!",
+      author: "Mesut Yilmaz",
+      company: "Telecom Solutions"
     }
   ];
 

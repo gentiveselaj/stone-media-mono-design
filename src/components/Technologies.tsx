@@ -7,7 +7,8 @@ import {
   SiNextdotjs, 
   SiJavascript, 
   SiAngular, 
-  SiIonic 
+  SiIonic ,
+  SiTailwindcss
 } from 'react-icons/si';
 
 const technologies = [
@@ -20,6 +21,8 @@ const technologies = [
   { name: 'JavaScript', icon: SiJavascript, purpose: 'Programming Language' },
   { name: 'Angular', icon: SiAngular, purpose: 'Frontend Framework' },
   { name: 'Ionic', icon: SiIonic, purpose: 'Hybrid App Development' },
+    { name: 'Tailwind', icon: SiTailwindcss, purpose: 'Hybrid App Development' },
+
 ];
 
 const containerVariants = {
@@ -94,9 +97,7 @@ const Technologies = () => {
               <h3 className="text-lg font-semibold text-card-foreground mb-2 text-center">
                 {tech.name}
               </h3>
-              <p className="text-sm text-muted-foreground text-center">
-                {tech.purpose}
-              </p>
+            
             </motion.div>
           ))}
         </motion.div>
