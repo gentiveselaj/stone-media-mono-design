@@ -9,6 +9,7 @@ import About from '@/components/About';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Technologies from '@/components/Technologies';
 import { AuroraHero } from '@/components/AuroraHero';
 import {
   useMotionTemplate,
@@ -48,6 +49,7 @@ const Index = () => {
       <div id="contact">
         <Contact />
       </div>
+      <Technologies />
       <Footer />
           
     </div>
