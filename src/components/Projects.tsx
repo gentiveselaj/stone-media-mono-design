@@ -10,8 +10,8 @@ const Projects = () => {
       description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
       tech: "HTML&CSS,Javascript,PHP, Laravel, mySQL, Ajax ",
       details: "This project features a robust admin dashboard, user authentication, and seamless payment gateway integration. It supports discount codes, order tracking, and analytics for store owners.",
-      visit:"https://www.e-baa.com",
-      image:"https://portfolio-1-psi-weld.vercel.app/ebaaa.png"
+      visit:"https://www.gogaj.com",
+      image:"./gogaj_promo.png"
     },
     {
       title: "Mobile News App",
