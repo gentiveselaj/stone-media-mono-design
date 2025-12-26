@@ -57,6 +57,16 @@ const Projects = () => {
            image:"./majodo.png"
     },
 
+     {
+      title: "FoniqiGroup GmbH ",
+      description: "Custom Website Design and development for a construction company company based in Switzerland",
+      tech: "React,Javascript,NextJS, TailwindCSS",
+      details: "A website for FoniqiGroup GmbH, a construction company based in Switzerland. The site features a sleek, modern design with a focus on showcasing their portfolio of projects, services offered, and client testimonials. Built with React and Next.js, the website is optimized for performance and SEO, ensuring a smooth user experience across all devices.",
+         visit:"https://www.foniqigroup.ch",
+           image:"./foniqigroup.png"
+    },
+
+
 
   ];
 
